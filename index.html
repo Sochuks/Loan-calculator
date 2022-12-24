@@ -14,12 +14,13 @@
        <link rel="stylesheet"  href="dist/css/main.css" />
 
 </head>
+
 <body>
 
     <section id="home">
 
         <!--container-->
-        <div class="flex flex-col container mx-auto justify-between align-center">
+        <div class="flex flex-col container mx-auto justify-between">
             
             <div class="mt-8 text-center px-4 my-4">
             <h2 class="text-4xl font-bold">A Simple Loan Calculator</h2>
@@ -28,90 +29,119 @@
             </div>
             
             <!--Form Container-->
-            <div class=" my-4 mx-4"> 
+            <div class="bg-white rounded-md px-6 py-8 ring-1 ring-slate-900/5 shadow-md"> 
 
                 <!--Form-->
-                <form id="loan" action="" class="flex flex-col space-y-8">
-                    <div class="flex flex-row items-center justify-between space-x-2 mx-4">
-                        <!--Row label-->
-                        <div class="flex items-center space-x-4">
-                            <span class="px-4 py-2 rounded-full bg-gray-200 md:py-1">
-                                1
-                            </span>
-                            <label class="text-base mt-0.5" for="amount">Loan Amount</label>
+                <form id="loan">
+
+                    <!--Flex-box container-->
+                    <div class="container flex flex-col space-y-8 px-4">
+
+                        <!--row 1-->
+                        <div class="flex justify-between space-x-2">
+
+                            <!--Row label-->
+                            <div class="flex items-center space-x-4">
+                                <span class="px-4 py-2 rounded-full bg-gray-200 md:py-1">
+                                    1
+                                </span>
+                                <label class="text-base mt-0.5" for="amount">Loan Amount</label>
+                            </div>
+                            
+                            
+                                  <input type="number" id="amount" 
+                                  class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 w-md rounded-md sm:text-sm focus:ring-1">
+    
                         </div>
-                        
-                        <div class="relative">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                                <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><!-- ... --></svg>
-                              </span>
-                              <input type="number" id="amount" 
-                              class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-md rounded-md sm:text-sm focus:ring-1">
 
+                        <!--row 2-->
+                        <div class="flex justify-between space-x-2">
+
+                            <!--Row label-->
+                            <div class="flex items-center space-x-4">
+                                <span class="px-4 py-2 rounded-full bg-gray-200 md:py-1">
+                                    2
+                                </span>
+                                <label class="text-base mt-0.5" for="rate">Interest Rate</label>
+                            </div>
+                            
+                            
+                                  <input type="number" id="rate" 
+                                  class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 w-md rounded-md sm:text-sm focus:ring-1">
+    
                         </div>
-                        
-                        
-                    </div>
 
-                    <div class="flex flex-row items-center justify-between space-x-2 mx-4">
-                        <!---Row label-->
-                        <div class="flex items-center space-x-4">
-                            <span class="px-4 py-2 rounded-full bg-gray-200 md:py-1">
-                                2
-                            </span>
+                        <!--row 3-->
+                        <div class="flex justify-between space-x-2">
 
-                            <label class="text-base mt-0.5" for="rate">Interest Rate</label>
+                            <!--Row label-->
+                            <div class="flex items-center space-x-4">
+                                <span class="px-4 py-2 rounded-full bg-gray-200 md:py-1">
+                                    3
+                                </span>
+                                <label class="text-base mt-0.5" for="year">Number of years</label>
+                            </div>
+                            
+                            
+                                  <input type="number" id="year" 
+                                  class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 w-md rounded-md sm:text-sm focus:ring-1">
+    
                         </div>
-                        
-                        <input type="number" id="rate" 
-                        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-md rounded-md sm:text-sm focus:ring-1">
-                    </div>
 
-                    <div class="flex flex-row items-center justify-between space-x-2 mx-4">
-                        <!--Row label-->
-                        <div class="flex items-center space-x-4">
-                            <span class="px-4 py-2 rounded-full bg-gray-200 md:py-1">
-                                3
-                            </span>
+                        <button class="px-2 py-2 text-white bg-primaryCol rounded-md baseline hover:bg-secCol" >Calculate</button>
 
-                            <label class="text-base mt-0.5" for="year">Number of Years</label>
-                        </div>
-                        
-                        <input type="number" id="year" 
-                        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-md rounded-md sm:text-sm focus:ring-1">
-                    </div>
-
-                    <button class="px-2 py-2 text-white bg-primaryCol rounded-md max-w-lbaseline hover:bg-secCol" >Calculate</button>
+                    </div><!--Flex-box container-->
+                
                 </form>
-            </div>
-        </div>
+
+            </div><!--Form container-->
+
+        </div><!--end Container-->
 
     </section>
 
-    <section id="result">
+   <section id="result">
 
         <!--Container-->
-        <div class="row">   
+        <div class="max-w-4xl px-4 mx-auto py-8 text-center">
 
-            <!--Monthly-->
-            <div class="row">
-                <h2 id="mp"></h2>
-                <p>Monthly Payments</p>
+            <!--heading-->
+          <h2 class="text-2xl font-bold text-center">
+            Calculated Results
+          </h2>
+
+          <!--Flex-box container-->
+          <div class="flex flex-col mt-8 md:flex-row md:space-x-6">
+
+            <!--Box 1-->
+            <div class="flex flex-col space-y-4 items-center p-6 rounded-lg bg-green-300 text-white md:w-1/3 ring-1 ring-slate-900/5 shadow-xl">
+
+                <h2 class="text-4xl font-bold" id="mp"></h2>
+                <p class="text-lg">Monthly Payments</p>
+
             </div>
 
-            <!--Interest-->
-            <div class="row">
-                <h2 id="ti"></h2>
-                <p>Total Interest</p>
+            <!--Box 2-->
+            <div class="flex flex-col space-y-4 items-center p-6 rounded-lg bg-thirdCol text-white md:w-1/3 ring-1 ring-slate-900/5 shadow-xl">
+
+                <h2 class="text-4xl font-bold" id="ti"></h2>
+                <p class="text-lg">Total Interest</p>
+
             </div>
 
-            <!--Amount-->
-            <div class="row">
-                <h2 id="tp"></h2>
-                <p>Total Amount</p>
+            <!--Box 3-->
+            <div class="flex flex-col space-y-4 items-center p-6 rounded-lg bg-primaryCol text-white md:w-1/3 ring-1 ring-slate-900/5 shadow-xl">
+
+                <h2 class="text-4xl font-bold" id="tp"></h2>
+                <p class="text-lg">Total Amount</p>
+
             </div>
-        </div>
-    </section>
+
+          </div><!--Flex-box container-->
+
+        </div><!--container-->
+
+   </section>
 
     <script src="dist/js/app.js"></script>
 </body>
