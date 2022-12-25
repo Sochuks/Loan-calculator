@@ -1,3 +1,3 @@
 ## Loan Calculator App
 
-A simpleloan calculator app developed using JavaScript, HTMl & TailwindCSS 
+A simple loan calculator app developed using JavaScript, HTML & TailwindCSS 
